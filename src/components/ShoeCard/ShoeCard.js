@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components/macro";
+import React from 'react';
+import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS } from "../../constants";
-import { formatPrice, pluralize, isNewShoe } from "../../utils";
-import Spacer from "../Spacer";
+import { COLORS, WEIGHTS } from '../../constants';
+import { formatPrice, pluralize, isNewShoe } from '../../utils';
+import Spacer from '../Spacer';
 
 const ShoeCard = ({
   slug,
@@ -31,7 +31,7 @@ const ShoeCard = ({
       ? 'new-release'
       : 'default'
 
-  let onSale = variant === "on-sale";
+  let onSale = variant === 'on-sale';
   let PriceC = onSale ? SalePrice : Price;
   return (
     <Link href={`/shoe/${slug}`}>
@@ -49,7 +49,7 @@ const ShoeCard = ({
           </Prices>
         </Row>
         <Row>
-          <ColorInfo>{pluralize("Color", numOfColors)}</ColorInfo>
+          <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
         </Row>
       </Wrapper>
     </Link>
@@ -94,7 +94,7 @@ const Prices = styled.div`
 `;
 
 const Price = styled.span`
-  text-decoration-line: ${(p) => (p.onSale ? "line-through" : null)};
+  text-decoration-line: ${(p) => (p.onSale ? 'line-through' : null)};
 `;
 
 const ColorInfo = styled.p`
@@ -108,11 +108,11 @@ const SalePrice = styled.span`
 
 const Flag = ({ variant }) => {
   switch (variant) {
-    case "default":
+    case 'default':
       return null;
-    case "new-release":
+    case 'new-release':
       return <JustReleased>Just released!</JustReleased>;
-    case "on-sale":
+    case 'on-sale':
       return <Sale>Sale</Sale>;
   }
 };

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components/macro";
+import React from 'react';
+import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS } from "../../constants";
-import Icon from "../Icon";
+import { COLORS, WEIGHTS } from '../../constants';
+import Icon from '../Icon';
 
 const Select = ({ label, value, children, ...delegated }) => {
   const childArray = React.Children.toArray(children);
